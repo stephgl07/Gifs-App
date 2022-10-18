@@ -1,0 +1,15 @@
+<div class="bg-dark border-right p-3" id="sidebar">
+  <h3 class="text-light">Gifs-App</h3>
+  <hr class="text-light" />
+  <div class="list-group list-reset">
+    <button
+      type="button"
+      class="list-group-item list-group-item-action"
+      *ngFor="let item of historial; let i = index"
+      (click)="BuscarGif(item)"
+    >
+      {{ item | titlecase }}
+      <i class="fa fa-trash float-end my-1" (click)="EliminarBusqueda(i)"></i>
+    </button>
+  </div>
+</div>
